@@ -2,9 +2,9 @@
   "$schema": "./schema/piphi-manifest.schema.json",
   "manifest_version": "1.0",
   "id": "piphi-network-knx",
-  "name": "Piphi Network Knx",
+  "name": "KNX",
   "version": "0.1.0",
-  "description": "PiPhi project- and datapoint-negotiated starter runtime for KNX/IP building controls.",
+  "description": "Expose project- and datapoint-negotiated KNX/IP building controls.",
   "metadata": {
     "generator": "piphi-network-create",
     "scaffold_version": "0.3.0",
@@ -133,5 +133,66 @@
         "default_widget": "tile"
       }
     }
-  ]
+  ],
+  "marketplace": {
+    "metadata_version": 2,
+    "display_name": "KNX",
+    "summary": "Expose project- and datapoint-negotiated KNX/IP building controls.",
+    "category": "other",
+    "regions": [
+      "WW"
+    ],
+    "languages": [
+      "en"
+    ],
+    "publisher": {
+      "name": "PiPhi Network",
+      "website_url": "https://piphi.io",
+      "support_url": "https://github.com/PiPhi-io/piphi-network-knx/issues",
+      "security_contact": "support@piphi.io"
+    },
+    "access": [
+      {
+        "id": "local_network",
+        "label": "Local network access",
+        "reason": "Discovers or communicates with supported services and devices on the homeowner's local network.",
+        "required": true
+      }
+    ],
+    "compatibility": [
+      {
+        "brand": "KNX Association",
+        "model": "KNX/IP projects and datapoints represented in the imported project"
+      }
+    ],
+    "documentation_url": "https://github.com/PiPhi-io/piphi-network-knx",
+    "support_url": "https://github.com/PiPhi-io/piphi-network-knx/issues",
+    "changelog_url": "https://github.com/PiPhi-io/piphi-network-knx/releases",
+    "quality_tier": "unrated",
+    "governance": {
+      "schema_version": 1,
+      "publication_status": "draft",
+      "rollout_percent": 0,
+      "lifecycle_status": "active",
+      "qualification": {
+        "status": "unverified"
+      }
+    },
+    "device_types": [
+      "building control",
+      "light",
+      "climate system",
+      "cover",
+      "sensor"
+    ],
+    "protocols": [
+      "KNX/IP"
+    ],
+    "discovery_methods": [
+      "project import",
+      "manual"
+    ],
+    "connectivity": "local",
+    "offline_support": "full"
+  }
 }
